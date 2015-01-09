@@ -3,6 +3,7 @@ function Student(firstname, lastname) {
   this.lastname = lastname,
   this.courses = [];
 }
+
 function Course(cName, dept, numCredits, weekDays, timeBlock){
   this.cName = cName,
   this.dept = dept,
@@ -12,11 +13,10 @@ function Course(cName, dept, numCredits, weekDays, timeBlock){
   this.timeBlock = timeBlock;
 }
 
-
-
 Student.prototype.name = function () {
   console.log(this.firstname + " " + this.lastname);
 };
+
 Student.prototype.enroll = function (course) {
 
   for (var i = 0; i < this.courses.length; i++){
@@ -26,6 +26,7 @@ Student.prototype.enroll = function (course) {
   }
   this.courses.push(course);
 };
+
 Student.prototype.courseLoad = function(){
   var cLoad = {};
   for (var i = 0; i < this.courses.length; i++){

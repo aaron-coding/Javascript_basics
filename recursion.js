@@ -1,6 +1,5 @@
 var exp = function (base, power) {
-
-  if (power === 0  ) {
+  if (power === 0) {
     return 1;
   }
   return base * exp(base, power - 1);
